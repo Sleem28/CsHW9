@@ -19,8 +19,16 @@ while(!numIsNatural)
     else
         Console.WriteLine("Число М должно быть натуральным!!! Введите его еще раз.");
 }
+numIsNatural = false;
+while(!numIsNatural)
+{
+    Console.Write("Введите число N: ");
+    N = int.Parse(Console.ReadLine()?? "");
+    if(N>0) 
+        numIsNatural = true;
+    else
+        Console.WriteLine("Число N должно быть натуральным!!! Введите его еще раз.");
+}
 
-Console.Write("Введите число N: ");
-N = int.Parse(Console.ReadLine()?? "");
 
 PrintNumbers(M,N);
